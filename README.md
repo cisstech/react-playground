@@ -26,7 +26,7 @@ yarn
 
 - Sample 1: Form Manager
   - Description: Simplifying Heterogeneous Form Management in React Applications.
-  - How to run: Run `yarn start` and go to `http://localhost:4200/form-manager`.
+  - How to run: Run `yarn start` and go to `http://localhost:4200/react-playground/form-manager`.
   - Article : [medium.com](https://medium.com/@mciissee/form-manager-pattern-simplifying-heterogeneous-form-management-in-react-applications-11207930d289)
   - Live demo: <https://cisstech.github.io/react-playground/form-manager>
 
