@@ -6,11 +6,14 @@ import { useListTasks } from '../hooks/useTaskProvider'
 import { TaskModel } from '../models/task'
 import { TaskUpdate } from './TaskUpdate'
 import { TaskTable } from './components/TaskTable'
+import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
 
 export const TaskList: React.FC = () => {
+  const screens = useBreakpoint()
+  const navigate = useNavigate()
+
   const { tasks, setTasks } = useListTasks()
   const [selection, setSelection] = useState<TaskModel | undefined>(undefined)
-  const navigate = useNavigate()
 
   return (
     <Space direction="vertical" style={{ width: '100%', justifyContent: 'center' }}>
@@ -23,7 +26,7 @@ export const TaskList: React.FC = () => {
         <Drawer
           open={true}
           title={selection.name}
-          width={'50%'}
+          width={screens.md ? '50%' : '100%'}
           onClose={() => setSelection(undefined)}
           footer={<Space></Space>}
         >
